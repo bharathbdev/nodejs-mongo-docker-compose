@@ -1,7 +1,7 @@
 // with docker-compose.yaml file
 docker compose build
 docker compose up
-docker ps
+docker ps // show all containers 
 docker ps -a
 docker rm containerid
 docker compose down
@@ -22,3 +22,17 @@ docker stop d7629a08004c
 docker images
 docker push bharathpersonal7898/reponame
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+
+
+docker pull mongo:latest
+docker run -d -p 2717:27017 -v ~/newdir:/data/db --name mymongoconatinername mongo:latest
+docker exec -it mymongoconatinername bash
+now we can do 
+mongo
+inside our system
+mongo localhost:2717
+
+
+docker volume ls
+docker-compose down --volume
+docker stop containerid
